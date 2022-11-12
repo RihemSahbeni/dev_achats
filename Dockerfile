@@ -1,7 +1,5 @@
-FROM maven:3.8.2-jdk-8
+FROM openjdk:8-jre-alpine
+COPY achat-1.0.jar achat-1.0.jar
+EXPOSE 8089
+ENTRYPOINT ["java", "-jar", "achat-1.0.jar"]
 
-WORKDIR /spring-app
-COPY . .
-RUN mvn clean install
-
-CMD mvn spring-boot:run
