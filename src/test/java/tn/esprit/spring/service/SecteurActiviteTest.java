@@ -68,7 +68,12 @@ public class SecteurActiviteTest {
 
 	@Test
 	public void getAllSecteursTest() {
-		List<SecteurActivite> SecteurList = new ArrayList<SecteurActivite>() {{
+		List<SecteurActivite> SecteurList = new ArrayList<SecteurActivite>() {/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+
+		{
 
 			add(new SecteurActivite(null, "bbbb","gggg", null));
 			add(new SecteurActivite(null,"kkkk","llll",null));
