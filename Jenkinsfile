@@ -23,7 +23,11 @@ pipeline{
             }
         }
          
-        
+             stage('SonarQube :Quality Test') {
+            steps {
+                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=sonar'
+            }
+        }
         
         }
     }
