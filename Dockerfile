@@ -5,3 +5,6 @@ COPY . .
 RUN mvn clean install
 
 CMD mvn spring-boot:run
+FROM adoptopenjdk/openjdk11
+COPY target/tpAchatProject-1.0.jar tpAchatProject-1.0.jar
+ENTRYPOINT ["java","-jar","/tpAchatProject-1.0.jar"]
