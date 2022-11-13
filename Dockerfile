@@ -1,5 +1,4 @@
-FROM openjdk:8-jre-alpine
-COPY achat-1.0.jar achat-1.0.jar
-EXPOSE 8089
-ENTRYPOINT ["java", "-jar", "achat-1.0.jar"]
+FROM adoptopenjdk/openjdk11
+COPY target/tpAchatProject-1.0.jar tpAchatProject-1.0.jar
+ENTRYPOINT ["java","-jar","/tpAchatProject-1.0.jar"]
 
