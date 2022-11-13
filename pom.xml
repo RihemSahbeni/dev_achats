@@ -17,7 +17,6 @@
 		<java.version>1.8</java.version>
 		<maven-jar-plugin.version>3.1.0</maven-jar-plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		
 	</properties>
 	<dependencies>
 		<dependency>
@@ -28,7 +27,6 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -44,7 +42,6 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-boot-starter</artifactId>
@@ -61,7 +58,6 @@
 			<version>5.9.1</version>
 		</dependency>
 	</dependencies>
-
 	<!-- Deploy to Nexus -->
 	<distributionManagement>
 		<repository>
@@ -89,7 +85,6 @@
 					</excludes>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-deploy-plugin</artifactId>
@@ -98,7 +93,6 @@
 					<skip>true</skip>
 				</configuration>
 			</plugin>
-
 			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
