@@ -31,6 +31,27 @@ pipeline{
              }
             }
         }
+          stage('Build Docker'){
+           	  steps{
+               		 sh 'docker build -t dorsafsaadi/spring .'
+            	}
+      		  }
+		stage('Docker Login'){
+            	steps{
+			
+                sh 'docker login -u dorsafsaadi -p 22043417Moi**'
+            }
+        }
+		 stage('Docker Push'){
+            	 steps{	
+                	sh 'docker push dorsafsaadi/spring'
+          	  }
+     		   }
+		stage('Start container') {
+            	 steps {
+                sh 'docker-compose up --build --force-recreate -d '
+     		 }
+     		   }
         
         }
     }
