@@ -38,7 +38,7 @@ pipeline {
 		  */
 		stage('SonarQube') {
 		 steps {
-			 withSonarQubeEnv('sonarqube-8.9.7'){
+			 withSonarQubeEnv('SonarQube'){
 			sh 'mvn sonar:sonar \
                   -Dsonar.projectKey=devops2 \
                   -Dsonar.host.url=http://192.168.1.122:9000 \
