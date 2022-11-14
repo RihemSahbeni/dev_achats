@@ -23,9 +23,12 @@ pipeline{
             }
         }
          
-             stage('SonarQube :Quality Test') {
-            steps {
-                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=sonar'
+      stage ('SonarQube :Quality Test')
+        {
+         steps{
+             withSonarQubeEnv(installationName: 'sonar'){
+                sh 'mvn sonar:sonar'
+             }
             }
         }
         

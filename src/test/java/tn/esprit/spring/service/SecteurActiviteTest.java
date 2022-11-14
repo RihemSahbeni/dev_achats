@@ -41,7 +41,7 @@ public class SecteurActiviteTest {
 
 	@Test
 	public void testRetrieveSecteur() {
-		SecteurActivite secteur = new SecteurActivite(1L,"aaa","bbb",null);
+		SecteurActivite secteur = new SecteurActivite(1L,"nouveausecteur","bb",null);
 		secteur.setIdSecteurActivite(1L);
 
 
@@ -60,7 +60,7 @@ public class SecteurActiviteTest {
 		secteur2.setIdSecteurActivite(2L);
 
 		SecteurService.addSecteurActivite(secteur2);
-		//verify(SecteurRepository, times(1)).save(secteur2);
+		verify(SecteurRepository, times(1)).save(secteur2);
 		System.out.println(secteur2); 
 		System.out.println(" Create is working correctly...!!");  
 	}
@@ -75,7 +75,7 @@ public class SecteurActiviteTest {
 
 		{
 
-			add(new SecteurActivite(null, "bbbb","gggg", null));
+			add(new SecteurActivite(null, "secteurs","gggg", null));
 			add(new SecteurActivite(null,"kkkk","llll",null));
 			add(new SecteurActivite(null,"uuuu","wwww",null));
 
