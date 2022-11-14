@@ -6,7 +6,7 @@ pipeline {
 			echo 'Pulling...';
 			 git branch: 'faiz-daoud',
 			 url : 'https://github.com/RihemSahbeni/dev_achats.git',
-			 credentialsId:'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';
+			 credentialsId:'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';
 			  }
 		  }
 		stage('maven clean') {
