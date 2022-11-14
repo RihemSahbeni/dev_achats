@@ -23,6 +23,14 @@ pipeline{
             }
         }
          
+         
+        stage('SonarQube analysis') {
+            steps {
+                withSonarQubeEnv('SonarQube') {
+                    sh "./gradlew sonarqube"
+                }
+            }
+        }
       stage ('SonarQube :Quality Test')
         {
          steps{
