@@ -24,21 +24,16 @@ pipeline{
         }
          
          
-        stage('SonarQube analysis') {
+  stage('MVN SONARQUBE') {
             steps {
-                withSonarQubeEnv('SonarQube') {
-                    sh "./gradlew sonarqube"
-                }
+                sh 'mvn sonar:sonar -Dsonar.login=admin -Dsonar.password=sonar'
             }
         }
-      stage ('SonarQube :Quality Test')
-        {
-         steps{
-             withSonarQubeEnv(installationName: 'sonar'){
-                sh 'mvn sonar:sonar'
-             }
+        stage('MVN Test') {
+            steps {
+                sh 'mvn test'
             }
-        }
+        }}
           stage('Build Docker'){
            	  steps{
                		 sh 'docker build -t dorsafsaadi/spring .'
