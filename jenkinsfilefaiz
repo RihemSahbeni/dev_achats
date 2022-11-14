@@ -4,8 +4,8 @@ pipeline {
 		stage('Checkout GIT') {
 		 steps {
 			echo 'Pulling...';
-			 git branch: 'dhia',
-			 url : 'https://github.com/hanineza/Devops-Education.git',
+			 git branch: 'faiz-daoud',
+			 url : 'https://github.com/RihemSahbeni/dev_achats.git',
 			 credentialsId:'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';
 			  }
 		  }
