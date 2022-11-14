@@ -15,7 +15,7 @@ services:
   springboot-app:
     depends_on:
       - mysqldb
-    image: dhiarekik/devops:latest
+    image: faizdaoud/faiz:latest
     container_name: springboot-app
     restart: on-failure
     env_file: ./.env

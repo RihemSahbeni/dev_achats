@@ -47,26 +47,27 @@ pipeline {
 			
 			  }
 		  }
+		  /*
 		stage('Nexus') {
 		 steps {
 			sh 'mvn deploy -DskipTests'
 			  }
 		  }
-		  
+		  */
 		  stage('Build Docker'){
            	  steps{
-               		 sh 'docker build -t dhiarekik/devops .'
+               		 sh 'docker build -t faizdaoud/faiz .'
             	}
       		  }
 		stage('Docker Login'){
             	steps{
 			
-                sh 'docker login -u dhiarekik -p 203JMT2209'
+                sh 'docker login -u faizdaoud -p Douda123='
             }
         }
 		 stage('Docker Push'){
             	 steps{	
-                	sh 'docker push dhiarekik/devops'
+                	sh 'docker push faizdaoud/faiz'
           	  }
      		   }
 		stage('Start container') {
